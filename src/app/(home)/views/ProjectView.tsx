@@ -12,11 +12,11 @@ const sortedProjects = [...projects].sort(
 
 export default function ProjectView() {
   return (
-    <div className="mt-[150px] flex flex-col items-center min-[1535px]:items-start ms-3">
+    <div className="mt-[150px] flex flex-col items-center min-[1540px]:items-start ms-3">
       <h2 className="text-4xl font-bold">My Projects</h2>
       <div className="flex flex-wrap gap-x-[50px] gap-y-[80px] mt-10 justify-center">
         {sortedProjects.map((item: Project) => (
-          <div key={item.id} className="flex flex-col w-[320px] sm:w-[450px] md:w-[475px] relative">
+          <div key={item.id} className="flex flex-col w-[320px] sm:w-[450px] md:w-[474px] relative">
             <div className="mb-4">
               <h2 className="text-xl font-bold">{item.name}</h2>
               <DateText startDate={item.startDate} endDate={item.endDate} />
