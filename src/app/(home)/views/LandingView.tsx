@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function LandingView() {
   return (
-    <div className="flex flex-col md:flex-row gap-[20px] md:justify-center items-center md:items-start mt-[150px] mx-12">
+    <div className="flex flex-col md:flex-row gap-[20px] md:justify-center items-center md:items-start mt-[100px] md:mt-[150px] mx-12">
       <div className="flex flex-col md:w-[500px]">
         <p className="text-xl">Hello, my name is</p>
         <h1 className="text-6xl font-bold mt-1 bg-gradient-to-r from-[#a600ff] to-[#4200ff]  inline-block text-transparent bg-clip-text">Noah M. Kim</h1>
