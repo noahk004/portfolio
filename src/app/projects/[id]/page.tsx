@@ -20,7 +20,7 @@ export default function Page() {
   }
 
   return (
-    <div className="container mx-auto justify-center">
+    <div className="px-4 md:px-16 pt-8 md:container md:mx-auto justify-center">
       <div className="flex flex-col mt-[4vw] mb-[200px] text-lg">
         <h2 className="text-3xl font-bold mb-2">{currProject.name}</h2>
 
