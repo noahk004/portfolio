@@ -105,11 +105,10 @@ const projects: Project[] = [
       "Screenshot2024-12-14175309.png",
     ],
     description: [
-      "IRVINE HACKS 2025!!",
-      "I implemented the FAQ section, as well as made some PRs on issues relating to load times and accessibility.",
-      "Building this website taught me much about the CI/CD pipeline, web development testing, and general good practice for team development.",
+      "Official Irvine Hacks 2025 website.",
+      "As a tech organizer for Hack at UCI, I work to ship features using Next.js and FastAPI in a team of just under 10 developers. During this development period, I made PRs for 2-3 issues per week, including the FAQ section, performance optimizations, accessibility changes, and small changes needed in the frontend and backend."
     ],
-    technologies: ["Next.js", "React", "Tailwind", "FastAPI"],
+    technologies: ["Typescript", "Next.js", "React", "Tailwind", "Python", "FastAPI"],
     featured: true,
   },
   {
@@ -144,7 +143,7 @@ const projects: Project[] = [
   },
   {
     id: 10,
-    name: "Jaimes",
+    name: "Jaimes | HackSC",
     endDate: new Date(2024, 11),
     repository: "https://github.com/noahk004/hacksc",
     images: ["gallery.jpg", "IMG_7575.jpg"],
@@ -160,11 +159,11 @@ const projects: Project[] = [
       "LangChain",
       "Nosana",
     ],
-    featured: true,
+    featured: false,
   },
   {
     id: 11,
-    name: "ZINA",
+    name: "ZINA | Cal Hacks 11.0",
     endDate: new Date(2024, 10),
     repository: "https://github.com/noahk004/zina",
     images: ["calhacks.png", "20241020_143051.jpg"],
@@ -185,7 +184,7 @@ const projects: Project[] = [
   },
   {
     id: 12,
-    name: "Guitar Shop | Frontend Design",
+    name: "Guitar Shop Frontend Design",
     endDate: new Date(2024, 6),
     repository: "https://github.com/noahk004/guitar-ecommerce",
     demo: "https://main.d2snk1g9ednhqc.amplifyapp.com/",

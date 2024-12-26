@@ -6,17 +6,23 @@ import { Project } from "@/lib/types";
 
 import DateText from "../components/DateText";
 
-const sortedProjects = [...projects].sort(
-  (a, b) => b.endDate.getTime() - a.endDate.getTime()
-);
+interface ProjectViewProps {
+  featured: boolean;
+}
 
-export default function ProjectView() {
+export default function ProjectView({ featured }: ProjectViewProps) {
+  const sortedProjects = [...projects].filter((project) => project.featured == featured).sort(
+    (a, b) => b.endDate.getTime() - a.endDate.getTime()
+  );
   return (
     <div className="mt-[150px] flex flex-col items-center min-[1540px]:items-start ms-3">
-      <h2 className="text-4xl font-bold">My Projects</h2>
+      <h2 className="text-4xl font-bold">{featured ? "Featured Projects" : "All Projects"}</h2>
       <div className="flex flex-wrap gap-x-[50px] gap-y-[80px] mt-10 justify-center">
         {sortedProjects.map((item: Project) => (
-          <div key={item.id} className="flex flex-col w-[320px] sm:w-[450px] md:w-[474px] relative">
+          <div
+            key={item.id}
+            className="flex flex-col w-[320px] sm:w-[450px] md:w-[474px] relative"
+          >
             <div className="mb-4">
               <h2 className="text-xl font-bold">{item.name}</h2>
               <DateText startDate={item.startDate} endDate={item.endDate} />

@@ -8,7 +8,8 @@ export default function Page() {
   return (
     <div className="container mx-auto">
       <LandingView />
-      <ProjectView />
+      <ProjectView featured={true}/>
+      <ProjectView featured={false}/>
       <ContactView />
     </div>
   );
