@@ -72,7 +72,7 @@ export default function Page() {
         </div>
       </div>
       <div className="px-4 md:px-16 pt-8 md:container md:mx-auto justify-center">
-        <div className="flex flex-col mt-[4vw] mb-[200px] text-lg">
+        <div className="flex flex-col mt-[4vw] mb-[200px] text-lg [&>*]:z-30">
           <h2 className="text-3xl font-bold mb-2">{currProject.name}</h2>
 
           <DateText
