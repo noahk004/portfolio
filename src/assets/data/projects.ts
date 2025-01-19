@@ -196,8 +196,29 @@ const projects: Project[] = [
       "I love looking at expensive instruments but unfortunately cannot afford them. As such, I created a frontend design to showcase some of the best-looking Fender guitars and placed them in my own mock guitar shop website.",
     ],
     technologies: ["React", "Bootstrap"],
-    featured: true,
+    featured: false,
   },
+  {
+    id: 13,
+    name: "UICM",
+    endDate: "current",
+    repository: "https://github.com/noahk004/ui-component-manager",
+    images: [
+      "Screenshot 2025-01-18 212402.png",
+      "Screenshot 2025-01-18 212339.png",
+      "Screenshot 2025-01-18 212510.png",
+      "Screenshot 2025-01-18 211602.png",
+      "Screenshot 2025-01-18 212425.png",
+
+    ],
+    description: [
+      "UI Component Manager, or UICM for short, is a platform for users to share and import UI components made by the community. While participating in hackathons, we felt it would be cool to have a place where users can store and find UI components to reuse, removing the need to have to make new ones for each project. Thus, we wanted to build an easy-to-use CLI tool along with an online web application that would help the management of these components.",
+      "As part of this project, our team of three has put in extensive effort to writing quality code. We leveraged tools like automatic linting and formatting, automated integration testing, and GitHub rules to ensure that the main branch is clean and functional. We put in extensive planning involving the planning of the our vision, timeline, API routes, and low/high fidelity mockups. Each week, we held sprint meetings to keep each other accountable in pushing features and to give updates on progress.",
+      "We are incredibly excited to hopefully launch our MVP. We are expecting to launch by the end of the UCI Winter quarter." 
+    ],
+    technologies: ["Typescript", "React.js", "Next.js", "Tailwind", "PostgreSQL", "Prisma ORM", "AWS SDK", "S3, Lambda, RDS, IAM", "Docker", "GitHub Actions", "Integration testing", "PNPM", "Turborepo", "Figma"],
+    featured: true
+  }
 ];
 
 export default projects;

@@ -2,7 +2,7 @@ export interface Project {
   id: number;
   name: string;
   startDate?: Date;
-  endDate: Date;
+  endDate: Date | "current";
   repository: string;
   demo?: string;
   images: string[];

@@ -1,6 +1,6 @@
 interface DateTextProps {
   startDate?: Date;
-  endDate: Date;
+  endDate: Date | "current";
 }
 
 export default function DateText({ startDate, endDate }: DateTextProps) {
@@ -14,8 +14,11 @@ export default function DateText({ startDate, endDate }: DateTextProps) {
           {startDate.getFullYear()} -{" "}
         </span>
       )}
-      {new Intl.DateTimeFormat("en-US", { month: "long" }).format(endDate)}{" "}
-      {endDate.getFullYear()}
+      {endDate === "current"
+        ? "Current"
+        : new Intl.DateTimeFormat("en-US", { month: "long" }).format(endDate) +
+          " " +
+          endDate.getFullYear()}
     </p>
   );
 }

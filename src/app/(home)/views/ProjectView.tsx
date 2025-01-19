@@ -11,12 +11,26 @@ interface ProjectViewProps {
 }
 
 export default function ProjectView({ featured }: ProjectViewProps) {
-  const sortedProjects = [...projects].filter((project) => project.featured == featured).sort(
-    (a, b) => b.endDate.getTime() - a.endDate.getTime()
-  );
+  const sortedProjects = [...projects]
+    .filter((project) => project.featured == featured)
+    .sort((a, b) => {
+      if (a.endDate === "current" && b.endDate !== "current") {
+        return -1; // `a` comes first
+      } else if (a.endDate !== "current" && b.endDate === "current") {
+        return 1; // `b` comes first
+      } else if (a.endDate === "current" && b.endDate === "current") {
+        return 0; // Keep order if both are "current"
+      } else {
+        // Safely call getTime() on Date type
+        return (b.endDate as Date).getTime() - (a.endDate as Date).getTime();
+      }
+    });
+
   return (
     <div className="mt-[150px] flex flex-col items-center min-[1540px]:items-start ms-3">
-      <h2 className="text-4xl font-bold">{featured ? "Featured Projects" : "All Projects"}</h2>
+      <h2 className="text-4xl font-bold">
+        {featured ? "Featured Projects" : "All Projects"}
+      </h2>
       <div className="flex flex-wrap gap-x-[50px] gap-y-[80px] mt-10 justify-center">
         {sortedProjects.map((item: Project) => (
           <div
