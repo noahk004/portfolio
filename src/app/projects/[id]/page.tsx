@@ -18,10 +18,10 @@ export default function Page() {
 
   const imageDirectory = "/images/projects";
 
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
-  const handleClickOutside = (event) => {
-    if (modalRef.current && !modalRef.current.contains(event.target)) {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
       // Clicked outside the modal
       setSelectedImage(-1); // Close the modal or perform your desired action
     }
