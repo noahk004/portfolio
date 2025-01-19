@@ -54,7 +54,7 @@ export default function Page() {
       <div
         className={`${
           selectedImage === -1 ? "opacity-0 z-0" : "opacity-100 z-40"
-        } bg-black w-full h-full bg-opacity-25 overscroll-contain fixed inset-0 flex items-center justify-center duration-200`}
+        } bg-black w-full h-full bg-opacity-25 overscroll-contain fixed inset-0 flex items-center justify-center duration-300`}
       >
         <div className="relative" ref={modalRef}>
           <button onClick={() => setSelectedImage(-1)}>
