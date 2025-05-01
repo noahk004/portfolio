@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import projects from "@/assets/data/projects";
 import { Project } from "@/lib/types";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
 
 import DateText from "../components/DateText";
 
@@ -56,8 +57,9 @@ export default function ProjectView({ featured }: ProjectViewProps) {
             <div className="h-14" />
             <Link
               href={`/projects/${item.id}`}
-              className="px-3 py-2 w-fit bg-foreground text-background hover:bg-background hover:text-foreground rounded-lg duration-300 absolute bottom-0 mt-4"
+              className="px-3 py-2 w-fit bg-foreground text-background hover:opacity-90 rounded-lg duration-200 absolute bottom-0 mt-4"
             >
+              <InfoCircledIcon className="inline-block w-4 h-4 mr-2" />
               See more
             </Link>
           </div>
