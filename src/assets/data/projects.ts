@@ -180,7 +180,7 @@ const projects: Project[] = [
       "LangChain",
       "ChromaDB",
     ],
-    featured: true,
+    featured: false,
   },
   {
     id: 12,
@@ -213,12 +213,53 @@ const projects: Project[] = [
     ],
     description: [
       "UI Component Manager, or UICM for short, is a platform for users to share and import UI components made by the community. While participating in hackathons, we felt it would be cool to have a place where users can store and find UI components to reuse, removing the need to have to make new ones for each project. Thus, we wanted to build an easy-to-use CLI tool along with an online web application that would help the management of these components.",
-      "As part of this project, our team of three has put in extensive effort to writing quality code. We leveraged tools like automatic linting and formatting, automated integration testing, and GitHub rules to ensure that the main branch is clean and functional. We put in extensive planning involving the planning of the our vision, timeline, API routes, and low/high fidelity mockups. Each week, we held sprint meetings to keep each other accountable in pushing features and to give updates on progress.",
-      "We are incredibly excited to hopefully launch our MVP. We are expecting to launch by the end of the UCI Winter quarter." 
+      "As part of this project, our team of three has put in extensive effort to writing quality code. We leveraged tools like automatic linting and formatting, automated integration testing, and GitHub rules to ensure that the main branch is clean and functional. We put in extensive planning involving the planning of the our vision, timeline, API routes, and low/high fidelity mockups. Each week, we held sprint meetings to keep each other accountable in pushing features and to give updates on progress."
     ],
     technologies: ["Typescript", "React.js", "Next.js", "Tailwind", "PostgreSQL", "Prisma ORM", "AWS SDK", "S3, Lambda, RDS, IAM", "Docker", "GitHub Actions", "Integration testing", "PNPM", "Turborepo", "Figma"],
+    featured: false
+  },
+  {
+    id: 14,
+    name: "SnapQuiz",
+    startDate: new Date(2025, 4),
+    endDate: new Date(2025, 5),
+    repository: "https://github.com/noahk004/snapquiz-api",
+    demo: "https://www.snapquiz.xyz/",
+    images: [
+      "Screenshot 2025-05-22 123545.png",
+      "Screenshot 2025-05-22 123605.png",
+      "Screenshot 2025-05-22 123624.png"
+
+    ],
+    description: [
+      "While studying for an AWS certification, I wanted a way to test my knowledge after having read documentation on services. So I created an platform that allows you to parse documents and generate exams.",
+      "Behind the scenes, the backend application parses the text document and passes it into OpenAI's GPT 4.1 nano, which then generates a series of questions, answers, and explanations. The backend then takes the returned data and stores it into Postgres, allowing users to take and review their newly generated exams.",
+    ],
+    technologies: ["Typescript", "React.js", "Next.js", "Tailwind", "Express.js", "PostgreSQL", "AWS EC2", "OpenAI API"],
     featured: true
-  }
+  },
+  {
+    id: 15,
+    name: "SmartPhoto | AWS CloudHacks 2025",
+    endDate: new Date(2024, 5),
+    repository: "https://github.com/bqtquach/AWS-Cloudhacks-Team-12-UCI",
+    demo: "https://devpost.com/software/smartphotos",
+    images: ["Screenshot 2025-05-22 124639.png", "Screenshot 2025-05-22 124655.png"],
+    description: [
+      "As part of AWS CloudHacks 2025 run by AI @ UCI, Bryan Quach, Dylan Stauffer, and I built an image-processing app that allows users to get instant feedback on photos they've taken. Users can input a photo and get information regarding cues, poses, lighting, and camera specifications, allowing lay people to have the ability to improve their photo-taking skills.",
+    ],
+    technologies: [
+      "React.js",
+      "Typescript",
+      "Python",
+      "FastAPI",
+      "AWS Amplify",
+      "AWS EC2",
+      "AWS Bedrock",
+      "AWS Rekognition"
+    ],
+    featured: true,
+  },
 ];
 
 export default projects;

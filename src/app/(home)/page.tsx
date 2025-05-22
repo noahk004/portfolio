@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import LandingView from "./views/LandingView";
-import EducationView from "./views/EducationView"
+import EducationView from "./views/EducationView";
 import ExperienceView from "./views/ExperienceView";
 import ProjectView from "./views/ProjectView";
 import ContactView from "./views/ContactView";
@@ -12,8 +12,8 @@ export default function Page() {
       <LandingView />
       <EducationView />
       <ExperienceView />
-      <ProjectView featured={true}/>
-      <ProjectView featured={false}/>
+      <ProjectView featured={true} />
+      <ProjectView featured={false} />
       <ContactView />
     </div>
   );
